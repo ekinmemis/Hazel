@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hazel.Services", "src\Libraries\Hazel.Services\Hazel.Services.csproj", "{2CE4A4FA-628A-4F7A-9EB8-E38846CADD1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel.Web", "Presentation\Hazel.Web\Hazel.Web.csproj", "{2365638B-CB5C-442A-B634-FB82177FAB66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel.Web", "src\Presentation\Hazel.Web\Hazel.Web.csproj", "{2365638B-CB5C-442A-B634-FB82177FAB66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
