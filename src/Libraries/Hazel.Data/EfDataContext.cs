@@ -41,12 +41,14 @@ namespace Hazel.Data
         /// Further configuration the model.
         /// </summary>
         /// <param name="modelBuilder">The builder being used to construct the model for this context.</param>
+        [Obsolete]
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //dynamically load all entity and query type configurations
             var typeConfigurations = Assembly.GetExecutingAssembly().GetTypes().Where(type =>
                 (type.BaseType?.IsGenericType ?? false)
-                    && (type.BaseType.GetGenericTypeDefinition() == typeof(HazelEntityTypeConfiguration<>)));
+                    && (type.BaseType.GetGenericTypeDefinition() == typeof(HazelEntityTypeConfiguration<>)
+                    || (type.BaseType.GetGenericTypeDefinition() == typeof(IQueryTypeConfiguration<>))));
 
             foreach (var typeConfiguration in typeConfigurations)
             {
